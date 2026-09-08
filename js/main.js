@@ -1,6 +1,6 @@
 /**
  * CLEANFOX — MAIN APPLICATION JAVASCRIPT
- * Header scroll handling, mobile drawer, scroll animations, toast notifications
+ * Header scroll handling, mobile drawer, scroll animations, active navigation, toast notifications
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -84,11 +84,21 @@ function initScrollAnimations() {
 /* Active Nav Link Handler */
 function initActiveNavLink() {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav-link, .drawer-nav a');
+  const navLinks = document.querySelectorAll('.nav-link, .dropdown-link, .drawer-nav a');
+
+  const serviceSubpages = ['services.html', 'deep-cleaning.html', 'kitchen-bathroom.html', 'sofa-carpet.html'];
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+      link.classList.add('active');
+      // If inside dropdown, also activate parent nav-link
+      const parentNavItem = link.closest('.nav-item');
+      if (parentNavItem) {
+        const parentLink = parentNavItem.querySelector('.nav-link');
+        if (parentLink) parentLink.classList.add('active');
+      }
+    } else if (href === 'services.html' && serviceSubpages.includes(currentPath)) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
