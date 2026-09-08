@@ -339,11 +339,11 @@
 @media (max-width: 640px) {
   .trust-grid {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1rem;
   }
   .trust-strip {
-    margin-top: 1.5rem;
-    padding: 1.25rem;
+    margin-top: 1.25rem;
+    padding: 1.15rem;
   }
 }
 
@@ -352,13 +352,13 @@
   position: relative;
   width: 100%;
   max-width: 900px;
-  height: 480px;
+  height: clamp(250px, 56vw, 480px);
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-xl);
   border: 2px solid var(--border-subtle);
   user-select: none;
-  touch-action: none;
+  touch-action: pan-y;
   margin: 0 auto;
 }
 
@@ -406,6 +406,7 @@
   cursor: ew-resize;
   transform: translateX(-50%);
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  touch-action: none;
 }
 
 .ba-handle-button {
@@ -460,22 +461,30 @@
 
 @media (max-width: 640px) {
   .before-after-wrapper {
-    height: 300px;
+    height: clamp(220px, 60vw, 320px);
     border-radius: var(--radius-lg);
   }
+  .ba-handle-button {
+    width: 36px;
+    height: 36px;
+  }
+  .ba-handle-button svg {
+    width: 15px;
+    height: 15px;
+  }
   .ba-badge {
-    top: 0.75rem;
-    padding: 0.25rem 0.6rem;
+    top: 0.65rem;
+    padding: 0.25rem 0.55rem;
     font-size: 0.65rem;
   }
-  .ba-badge-before { right: 0.75rem; }
-  .ba-badge-after { left: 0.75rem; }
+  .ba-badge-before { right: 0.65rem; }
+  .ba-badge-after { left: 0.65rem; }
 }
 
 /* 4. PREMIUM SERVICE CARDS */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
 }
 

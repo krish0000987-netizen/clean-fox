@@ -48,17 +48,27 @@ function initBeforeAfterSliders() {
     });
 
     // Touch events
-    handle.addEventListener('touchstart', (e) => {
+    slider.addEventListener('touchstart', (e) => {
+      if (e.target.closest('.ba-badge')) return;
       isDragging = true;
+      if (e.touches && e.touches.length > 0) {
+        updateSliderPosition(e.touches[0].clientX);
+      }
     }, { passive: true });
 
     window.addEventListener('touchend', () => {
       isDragging = false;
     });
 
+    window.addEventListener('touchcancel', () => {
+      isDragging = false;
+    });
+
     window.addEventListener('touchmove', (e) => {
       if (!isDragging) return;
-      updateSliderPosition(e.touches[0].clientX);
+      if (e.touches && e.touches.length > 0) {
+        updateSliderPosition(e.touches[0].clientX);
+      }
     }, { passive: true });
 
     // Click anywhere on the slider container to move handle
@@ -68,3 +78,4 @@ function initBeforeAfterSliders() {
     });
   });
 }
+

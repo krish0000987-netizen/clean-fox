@@ -59,6 +59,13 @@ function initMobileDrawer() {
   drawerLinks.forEach(link => {
     link.addEventListener('click', closeDrawer);
   });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      closeDrawer();
+    }
+  });
 }
 
 /* Scroll Animations */
@@ -92,7 +99,6 @@ function initActiveNavLink() {
     const href = link.getAttribute('href');
     if (href === currentPath || (currentPath === '' && href === 'index.html')) {
       link.classList.add('active');
-      // If inside dropdown, also activate parent nav-link
       const parentNavItem = link.closest('.nav-item');
       if (parentNavItem) {
         const parentLink = parentNavItem.querySelector('.nav-link');
@@ -118,7 +124,7 @@ window.showToast = function(message, duration = 4000) {
   const toast = document.createElement('div');
   toast.className = 'toast';
   toast.innerHTML = `
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
       <polyline points="22 4 12 14.01 9 11.01"></polyline>
     </svg>
@@ -127,7 +133,6 @@ window.showToast = function(message, duration = 4000) {
 
   container.appendChild(toast);
 
-  // Trigger animation
   requestAnimationFrame(() => {
     toast.classList.add('show');
   });
