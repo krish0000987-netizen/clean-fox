@@ -333,7 +333,7 @@
 
 .plan-card.featured {
   border-color: var(--brand-emerald);
-  box-shadow: 0 16px 40px rgba(5, 150, 105, 0.15);
+  box-shadow: 0 16px 40px rgba(53, 53, 207, 0.15);
   transform: scale(1.03);
 }
 
@@ -342,7 +342,7 @@
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, var(--brand-emerald), #047857);
+  background: linear-gradient(135deg, var(--brand-emerald), #1565C0);
   color: #FFFFFF;
   font-family: var(--font-heading);
   font-size: 0.75rem;
@@ -351,7 +351,7 @@
   letter-spacing: 0.1em;
   padding: 0.35rem 1.25rem;
   border-radius: var(--radius-full);
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4);
+  box-shadow: 0 4px 12px rgba(53, 53, 207, 0.35);
 }
 
 .plan-header {
@@ -380,7 +380,7 @@
   font-size: 1.1rem;
   font-weight: 800;
   color: var(--brand-emerald);
-  background: rgba(5, 150, 105, 0.08);
+  background: rgba(53, 53, 207, 0.08);
   padding: 0.45rem 1.15rem;
   border-radius: var(--radius-full);
 }
@@ -595,7 +595,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.2);
+  box-shadow: 0 4px 14px rgba(53, 53, 207, 0.20);
   z-index: 2;
 }
 
@@ -653,7 +653,7 @@
 }
 
 .faq-item.active {
-  border-color: rgba(5, 150, 105, 0.35);
+  border-color: rgba(53, 53, 207, 0.30);
 }
 
 .faq-question {
@@ -761,7 +761,7 @@
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   border-color: var(--brand-emerald);
   background: #FFFFFF;
-  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.12);
+  box-shadow: 0 0 0 4px rgba(53, 53, 207, 0.12);
 }
 
 .form-textarea {

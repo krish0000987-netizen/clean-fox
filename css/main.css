@@ -1,41 +1,47 @@
 /* ==========================================================================
    CLEANFOX — MASTER DESIGN SYSTEM & CORE STYLESHEET
-   Aesthetics: ₹50 Lakh Luxury Modern Home Care
-   Palette: Deep Slate / Obsidian Navy (#0A192F, #0F172A), Emerald/Teal (#059669, #0E7490),
-            Vibrant Mint (#10B981), Pristine Snow (#FFFFFF, #F8FAFC)
+   Brand Palette: Deep Indigo (#3535CF) → Sky Blue (#29B6F6) — from Logo Gradient
+   Backgrounds: Deep Navy (#0D1B3E), Snow (#FFFFFF, #F8FAFC)
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap');
 
 :root {
-  /* Colors */
-  --primary-navy: #0A192F;
-  --primary-dark: #0F172A;
-  --surface-dark: #1E293B;
-  --brand-teal: #0E7490;
-  --brand-emerald: #059669;
-  --brand-accent: #10B981;
-  --brand-glow: rgba(16, 185, 129, 0.25);
-  --brand-sky: #06B6D4;
-  --text-main: #0F172A;
+  /* Brand Colors — matches Cleanfox logo gradient */
+  --primary-navy: #0D1B3E;
+  --primary-dark: #081022;
+  --surface-dark: #162040;
+  --brand-blue: #3535CF;
+  --brand-sky: #29B6F6;
+  --brand-emerald: #3535CF;   /* alias kept for backward compat */
+  --brand-accent: #29B6F6;    /* alias kept for backward compat */
+  --brand-teal: #1565C0;
+  --brand-glow: rgba(53, 53, 207, 0.22);
+  --brand-gradient: linear-gradient(135deg, #3535CF 0%, #29B6F6 100%);
+  --brand-gradient-hover: linear-gradient(135deg, #29B6F6 0%, #3535CF 100%);
+
+  /* Text */
+  --text-main: #0D1B3E;
   --text-muted: #475569;
   --text-light: #64748B;
   --text-white: #F8FAFC;
+
+  /* Backgrounds */
   --bg-main: #FFFFFF;
-  --bg-subtle: #F8FAFC;
-  --bg-slate: #F1F5F9;
-  --border-subtle: rgba(15, 23, 42, 0.08);
+  --bg-subtle: #F0F4FF;
+  --bg-slate: #E8EEFF;
+  --border-subtle: rgba(53, 53, 207, 0.10);
   --border-glass: rgba(255, 255, 255, 0.15);
   --card-bg: #FFFFFF;
   --glass-bg: rgba(255, 255, 255, 0.92);
-  --glass-dark: rgba(10, 25, 47, 0.88);
+  --glass-dark: rgba(13, 27, 62, 0.88);
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.12);
-  --shadow-xl: 0 24px 60px rgba(15, 23, 42, 0.16);
-  --shadow-glow: 0 10px 30px rgba(16, 185, 129, 0.3);
+  --shadow-sm: 0 2px 8px rgba(13, 27, 62, 0.06);
+  --shadow-md: 0 8px 24px rgba(13, 27, 62, 0.10);
+  --shadow-lg: 0 16px 40px rgba(13, 27, 62, 0.14);
+  --shadow-xl: 0 24px 60px rgba(13, 27, 62, 0.18);
+  --shadow-glow: 0 10px 30px rgba(41, 182, 246, 0.30);
 
   /* Radii */
   --radius-sm: 8px;
@@ -173,18 +179,18 @@ p:last-child { margin-bottom: 0; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--brand-emerald);
-  background: rgba(5, 150, 105, 0.08);
+  color: var(--brand-blue);
+  background: rgba(53, 53, 207, 0.08);
   padding: 0.4rem 1rem;
   border-radius: var(--radius-full);
   margin-bottom: 1rem;
-  border: 1px solid rgba(5, 150, 105, 0.2);
+  border: 1px solid rgba(53, 53, 207, 0.2);
 }
 
 .section-tag.light {
-  color: var(--brand-accent);
-  background: rgba(16, 185, 129, 0.15);
-  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--brand-sky);
+  background: rgba(41, 182, 246, 0.15);
+  border-color: rgba(41, 182, 246, 0.3);
 }
 
 .section-title {
@@ -285,14 +291,29 @@ p:last-child { margin-bottom: 0; }
   width: 38px;
   height: 38px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, var(--brand-emerald), var(--brand-teal));
+  background: var(--brand-gradient);
   color: #FFFFFF;
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35);
+  box-shadow: 0 4px 12px rgba(53, 53, 207, 0.35);
   flex-shrink: 0;
 }
 
 .brand-logo span.highlight {
-  color: var(--brand-emerald);
+  color: var(--brand-sky);
+}
+
+/* Cleanfox logo image in nav */
+.brand-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .brand-logo-img { height: 32px; }
+}
+@media (max-width: 480px) {
+  .brand-logo-img { height: 28px; }
 }
 
 .brand-tagline {
@@ -343,13 +364,13 @@ p:last-child { margin-bottom: 0; }
   left: 0;
   width: 0;
   height: 2.5px;
-  background: var(--brand-emerald);
+  background: var(--brand-gradient);
   transition: width var(--transition-normal);
   border-radius: var(--radius-full);
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--brand-emerald);
+  color: var(--brand-blue);
 }
 
 .nav-link:hover::after, .nav-link.active::after {
@@ -424,13 +445,13 @@ p:last-child { margin-bottom: 0; }
 .dropdown-link svg {
   width: 16px;
   height: 16px;
-  stroke: var(--brand-emerald);
+  stroke: var(--brand-blue);
   flex-shrink: 0;
 }
 
 .dropdown-link:hover, .dropdown-link.active {
   background: var(--bg-subtle);
-  color: var(--brand-emerald);
+  color: var(--brand-blue);
   transform: translateX(4px);
 }
 
@@ -498,15 +519,15 @@ p:last-child { margin-bottom: 0; }
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--brand-emerald) 0%, #047857 100%);
+  background: var(--brand-gradient);
   color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.35);
+  box-shadow: 0 4px 16px rgba(53, 53, 207, 0.30);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.45);
-  background: linear-gradient(135deg, #10B981 0%, var(--brand-emerald) 100%);
+  box-shadow: 0 8px 24px rgba(41, 182, 246, 0.40);
+  background: var(--brand-gradient-hover);
   color: #FFFFFF;
 }
 
@@ -518,8 +539,8 @@ p:last-child { margin-bottom: 0; }
 }
 
 .btn-secondary:hover {
-  border-color: var(--brand-emerald);
-  color: var(--brand-emerald);
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -660,7 +681,7 @@ p:last-child { margin-bottom: 0; }
 
 .drawer-nav a.active, .drawer-nav a:hover {
   background: var(--bg-subtle);
-  color: var(--brand-emerald);
+  color: var(--brand-blue);
 }
 
 .drawer-nav-divider {
@@ -748,7 +769,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .bottom-btn-book {
-  background: linear-gradient(135deg, var(--brand-emerald), #047857);
+  background: var(--brand-gradient);
   color: #FFFFFF;
 }
 
@@ -818,7 +839,7 @@ p:last-child { margin-bottom: 0; }
   left: 0;
   width: 32px;
   height: 2px;
-  background: var(--brand-accent);
+  background: var(--brand-gradient);
 }
 
 .footer-links {
@@ -836,7 +857,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .footer-links a:hover {
-  color: var(--brand-accent);
+  color: var(--brand-sky);
   transform: translateX(4px);
 }
 
@@ -858,7 +879,7 @@ p:last-child { margin-bottom: 0; }
 .footer-contact-item svg {
   width: 20px;
   height: 20px;
-  stroke: var(--brand-accent);
+  stroke: var(--brand-sky);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -873,7 +894,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .footer-phone-big:hover {
-  color: var(--brand-accent);
+  color: var(--brand-sky);
 }
 
 .footer-bottom {
@@ -912,7 +933,7 @@ p:last-child { margin-bottom: 0; }
   gap: 0.75rem;
   font-size: 0.9rem;
   font-weight: 600;
-  border-left: 4px solid var(--brand-accent);
+  border-left: 4px solid var(--brand-sky);
   pointer-events: auto;
   transform: translateY(100px);
   opacity: 0;
@@ -927,6 +948,12 @@ p:last-child { margin-bottom: 0; }
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS & MOBILE OPTIMIZATIONS
    ========================================================================== */
+
+/* Prevent horizontal scroll on all screens */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
 
 @media (max-width: 1180px) {
   .header-top-bar {
@@ -944,7 +971,7 @@ p:last-child { margin-bottom: 0; }
     display: block;
   }
   body {
-    padding-bottom: calc(65px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
   }
 }
 
@@ -967,6 +994,25 @@ p:last-child { margin-bottom: 0; }
   .section-header {
     margin-bottom: 2rem;
   }
+  /* Stack hero CTA buttons on mobile */
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  /* Stack CTA button rows */
+  .cta-buttons-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .cta-buttons-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 640px) {
@@ -984,17 +1030,6 @@ p:last-child { margin-bottom: 0; }
     padding-bottom: 0.55rem;
     gap: 0.75rem;
   }
-  .brand-logo {
-    font-size: 1.3rem;
-  }
-  .brand-logo .logo-fox-badge {
-    width: 34px;
-    height: 34px;
-  }
-  .brand-tagline {
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
-  }
   .nav-actions {
     gap: 0.5rem;
   }
@@ -1002,20 +1037,21 @@ p:last-child { margin-bottom: 0; }
     padding: 0.45rem 0.85rem;
     font-size: 0.8rem;
   }
+  /* Bottom action bar */
+  .bottom-bar-grid {
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 0.4rem;
+  }
+  .bottom-bar-btn {
+    min-height: 52px;
+    font-size: 0.72rem;
+  }
 }
 
 @media (max-width: 480px) {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-  .brand-logo {
-    font-size: 1.2rem;
-    gap: 0.45rem;
-  }
-  .brand-logo .logo-fox-badge {
-    width: 30px;
-    height: 30px;
   }
   .drawer-content {
     width: 90%;
@@ -1036,15 +1072,13 @@ p:last-child { margin-bottom: 0; }
 }
 
 @media (max-width: 360px) {
-  .brand-tagline {
-    display: none;
-  }
-  .brand-logo {
-    font-size: 1.15rem;
+  .brand-logo-img {
+    height: 26px;
   }
   .nav-actions .btn-sm {
     padding: 0.4rem 0.65rem;
     font-size: 0.75rem;
   }
 }
+
 
