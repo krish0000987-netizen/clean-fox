@@ -248,8 +248,8 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="addressArea" class="form-label">Address / Node in Navi Mumbai *</label>
-                  <input type="text" id="addressArea" class="form-input" placeholder="e.g. Sector 20, Kharghar" required>
+                  <label for="addressArea" class="form-label">Address / Area in Mumbai *</label>
+                  <input type="text" id="addressArea" class="form-input" placeholder="e.g. Bandra, Andheri, Kharghar, Vashi, Powai, etc." required>
                 </div>
               </div>
 
@@ -332,42 +332,54 @@
       </div>
     </section>
 
-    <!-- SECTION 2: NAVI MUMBAI SERVICE COVERAGE AREA -->
+    <!-- SECTION 2: MUMBAI SERVICE COVERAGE AREA -->
     <section class="section-spacing bg-subtle">
       <div class="container">
         <div class="section-header">
           <div class="section-tag">Locality Coverage</div>
-          <h2 class="section-title">Serving All Navi Mumbai Nodes</h2>
-          <p class="section-desc">Our mobile specialist crews operate seamlessly across every major neighborhood.</p>
+          <h2 class="section-title">Serving All Mumbai</h2>
+          <p class="section-desc">Our mobile specialist crews operate seamlessly across All Mumbai, Navi Mumbai, and surrounding regions.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin-top: 2rem;">
-          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm);">
-            Kharghar
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-top: 2.5rem;">
+          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; color: var(--brand-blue);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 800;">South Mumbai</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; font-weight: 500;">Colaba, Nariman Point, Marine Drive, Worli, Dadar</p>
           </div>
-          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm);">
-            Panvel & New Panvel
+
+          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; color: var(--brand-blue);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 800;">Western Suburbs</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; font-weight: 500;">Bandra, Juhu, Andheri, Goregaon, Malad, Borivali</p>
           </div>
-          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm);">
-            Seawoods
+
+          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; color: var(--brand-blue);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 800;">Central Suburbs</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; font-weight: 500;">Kurla, Ghatkopar, Chembur, Powai, Mulund</p>
           </div>
-          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm);">
-            Nerul
+
+          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; color: var(--brand-blue);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 800;">Navi Mumbai</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; font-weight: 500;">Vashi, Nerul, Belapur, Kharghar, Panvel, Ulwe</p>
           </div>
-          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm);">
-            CBD Belapur
-          </div>
-          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm);">
-            Vashi & Sanpada
-          </div>
-          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm);">
-            Kopar Khairane
-          </div>
-          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm);">
-            Airoli & Ghansoli
-          </div>
-          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm);">
-            Ulwe & Dronagiri
+
+          <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem 1.25rem; text-align: center; font-weight: 700; color: var(--primary-navy); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; color: var(--brand-blue);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 800;">Thane &amp; Beyond</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; font-weight: 500;">Ghodbunder Road, Majiwada, Dombivli, Kalyan</p>
           </div>
         </div>
       </div>
