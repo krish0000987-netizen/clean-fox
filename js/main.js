@@ -8,7 +8,69 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   initScrollAnimations();
   initActiveNavLink();
+  initPricingTabs();
 });
+
+/* Interactive Pricing Tabs Filter */
+function initPricingTabs() {
+  const tabContainers = document.querySelectorAll('.pricing-filter-tabs');
+  if (!tabContainers.length) return;
+
+  tabContainers.forEach(container => {
+    const tabs = container.querySelectorAll('.pricing-tab');
+    const parentSection = container.closest('section');
+    if (!parentSection) return;
+
+    const cards = parentSection.querySelectorAll('.pricing-card');
+    const quickItems = parentSection.querySelectorAll('.pricing-quick-item');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const filter = tab.getAttribute('data-filter');
+
+        // Update active tab button
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        // Filter cards
+        cards.forEach(card => {
+          const cats = (card.getAttribute('data-category') || '').split(' ');
+          if (filter === 'all' || cats.includes(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        // Filter quick list items
+        quickItems.forEach(item => {
+          const cat = (item.getAttribute('data-category') || '').split(' ');
+          if (filter === 'all' || cat.includes(filter)) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Make quick items clickable to filter category
+    quickItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const cat = item.getAttribute('data-category');
+        if (!cat) return;
+        const matchingTab = container.querySelector(`.pricing-tab[data-filter="${cat}"]`);
+        if (matchingTab) {
+          matchingTab.click();
+        }
+      });
+    });
+  });
+}
 
 /* Sticky Header on Scroll */
 function initStickyHeader() {

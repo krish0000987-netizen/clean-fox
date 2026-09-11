@@ -749,7 +749,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo" style="color: #FFFFFF;">
-            <img src="images/cleanfox-logo.png" alt="Cleanfox" class="brand-logo-img" style="filter: brightness(0) invert(1);">
+            <img src="images/cleanfox-logo-white.png" alt="Cleanfox" class="brand-logo-img">
           </a>
           <p class="footer-about">
             Professional Home Cleaning Service based in Navi Mumbai. We bring premium hygiene, machine floor care, and fabric restoration to modern apartments and homes.
@@ -823,48 +823,7 @@
     </div>
   </div>
 
-  <script>
-    // Pricing section filter tabs
-    (function() {
-      var tabs = document.querySelectorAll('.pricing-tab');
-      var cards = document.querySelectorAll('#pricingCardsGrid .pricing-card');
-      var quickItems = document.querySelectorAll('#pricingQuickList .pricing-quick-item');
-
-      tabs.forEach(function(tab) {
-        tab.addEventListener('click', function() {
-          var filter = this.getAttribute('data-filter');
-
-          // Update active tab
-          tabs.forEach(function(t) {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-          });
-          this.classList.add('active');
-          this.setAttribute('aria-selected', 'true');
-
-          // Filter cards
-          cards.forEach(function(card) {
-            var cats = card.getAttribute('data-category') || '';
-            if (filter === 'all' || cats.split(' ').indexOf(filter) !== -1) {
-              card.classList.remove('hidden');
-            } else {
-              card.classList.add('hidden');
-            }
-          });
-
-          // Filter quick list items
-          quickItems.forEach(function(item) {
-            var cat = item.getAttribute('data-category') || '';
-            if (filter === 'all' || cat.split(' ').indexOf(filter) !== -1) {
-              item.classList.remove('hidden');
-            } else {
-              item.classList.add('hidden');
-            }
-          });
-        });
-      });
-    })();
-  </script>
+  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>

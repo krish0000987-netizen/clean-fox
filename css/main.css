@@ -303,17 +303,44 @@ p:last-child { margin-bottom: 0; }
 
 /* Cleanfox logo image in nav */
 .brand-logo-img {
-  height: 40px;
+  height: 56px;
   width: auto;
+  max-width: 250px;
   display: block;
   object-fit: contain;
+  transition: transform var(--transition-fast);
 }
 
-@media (max-width: 640px) {
-  .brand-logo-img { height: 32px; }
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.02);
+}
+
+/* Footer logo — prominent, large, and high-visibility */
+.footer-brand .brand-logo-img {
+  height: 62px;
+  width: auto;
+  max-width: 270px;
+  display: block;
+  object-fit: contain;
+  filter: none;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 991px) {
+  .brand-logo-img { height: 50px; max-width: 220px; }
+  .footer-brand .brand-logo-img { height: 54px; max-width: 235px; }
+}
+@media (max-width: 768px) {
+  .brand-logo-img { height: 44px; max-width: 190px; }
+  .footer-brand .brand-logo-img { height: 48px; max-width: 205px; }
 }
 @media (max-width: 480px) {
-  .brand-logo-img { height: 28px; }
+  .brand-logo-img { height: 38px; max-width: 165px; }
+  .footer-brand .brand-logo-img { height: 42px; max-width: 180px; }
+}
+@media (max-width: 360px) {
+  .brand-logo-img { height: 32px; max-width: 140px; }
+  .footer-brand .brand-logo-img { height: 36px; max-width: 155px; }
 }
 
 .brand-tagline {
@@ -1072,9 +1099,6 @@ html, body {
 }
 
 @media (max-width: 360px) {
-  .brand-logo-img {
-    height: 26px;
-  }
   .nav-actions .btn-sm {
     padding: 0.4rem 0.65rem;
     font-size: 0.75rem;

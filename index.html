@@ -110,9 +110,9 @@
               </a>
             </div>
           </li>
-          <li class="nav-item"><a href="plans.html" class="nav-link">Plans</a></li>
+          <li class="nav-item"><a href="#homePricing" class="nav-link">Pricing &amp; Plans</a></li>
           <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-          <li class="nav-item"><a href="reviews-faqs.html" class="nav-link">Reviews & FAQs</a></li>
+          <li class="nav-item"><a href="reviews-faqs.html" class="nav-link">Reviews &amp; FAQs</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -146,9 +146,9 @@
       <ul class="drawer-nav">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="plans.html">Residential Plans</a></li>
+        <li><a href="#homePricing">Pricing &amp; Plans</a></li>
         <li><a href="gallery.html">Visual Gallery</a></li>
-        <li><a href="reviews-faqs.html">Reviews & FAQs</a></li>
+        <li><a href="reviews-faqs.html">Reviews &amp; FAQs</a></li>
         <li><a href="contact.html">Contact / Book Now</a></li>
       </ul>
 
@@ -217,9 +217,13 @@
               BOOK A CLEANING
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
-            <a href="tel:8369437974" class="btn btn-outline-light btn-lg">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              CALL 8369437974
+            <a href="#homePricing" class="btn btn-outline-light btn-lg">
+              VIEW PRICINGS
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <a href="tel:8369437974" class="btn btn-outline-light btn-lg" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.25);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              8369437974
             </a>
           </div>
 
@@ -749,6 +753,356 @@
       </div>
     </section>
 
+    <!-- PRICING SECTION (Homepage) -->
+    <section class="section-spacing bg-subtle" id="homePricing">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Transparent Pricing</div>
+          <h2 class="section-title">Our Deep Cleaning Services</h2>
+          <p class="section-desc">Transparent pricing for every home size across Navi Mumbai. No hidden charges.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="pricing-filter-tabs" role="tablist" aria-label="Service Categories">
+          <button class="pricing-tab active" data-filter="all" role="tab" aria-selected="true">All Packages</button>
+          <button class="pricing-tab" data-filter="empty-flat" role="tab" aria-selected="false">Empty Flat</button>
+          <button class="pricing-tab" data-filter="furnished" role="tab" aria-selected="false">Furnished Flat</button>
+          <button class="pricing-tab" data-filter="office-sofa" role="tab" aria-selected="false">Office &amp; Sofa</button>
+          <button class="pricing-tab" data-filter="silver" role="tab" aria-selected="false">Silver Package</button>
+          <button class="pricing-tab" data-filter="gold" role="tab" aria-selected="false">Gold Package</button>
+          <button class="pricing-tab" data-filter="wall-wiping" role="tab" aria-selected="false">Wall Wet Wiping</button>
+        </div>
+
+        <!-- Quick Price List -->
+        <div class="pricing-quick-list" id="homePricingQuickList">
+          <div class="pricing-quick-item" data-category="empty-flat"><span>1 BHK Deep Cleaning</span><span class="pql-price">₹2,699 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="empty-flat"><span>2 BHK Deep Cleaning</span><span class="pql-price">₹3,499 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="empty-flat"><span>3 BHK Deep Cleaning</span><span class="pql-price">₹3,999 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="empty-flat"><span>4 BHK Deep Cleaning</span><span class="pql-price">₹5,999 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="empty-flat"><span>5 BHK Deep Cleaning</span><span class="pql-price pql-custom">Custom quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="furnished"><span>1 BHK Furnished Home Deep Cleaning</span><span class="pql-price">₹3,499 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="furnished"><span>2 BHK Furnished Home Deep Cleaning</span><span class="pql-price">₹3,999 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="furnished"><span>3 BHK Furnished Home Deep Cleaning</span><span class="pql-price">₹4,999 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="furnished"><span>4 BHK Furnished Home Deep Cleaning</span><span class="pql-price pql-custom">Custom quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="empty-flat"><span>Empty Home Deep Cleaning</span><span class="pql-price">₹2,699 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="furnished"><span>Furnished Home Deep Cleaning</span><span class="pql-price">₹3,499 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="empty-flat"><span>Occupied Home Deep Cleaning</span><span class="pql-price">₹4,000 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="office-sofa"><span>Sofa Shampooing</span><span class="pql-price pql-custom">Starts at ₹199/seat <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+          <div class="pricing-quick-item" data-category="office-sofa"><span>Office Deep Cleaning</span><span class="pql-price pql-custom">Starts at ₹3,500 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="pricing-cards-grid" id="homePricingCardsGrid">
+
+          <!-- EMPTY FLAT -->
+          <div class="pricing-card" data-category="empty-flat">
+            <div class="pc-badge pc-badge-empty">EMPTY FLAT</div>
+            <h3 class="pc-title">1 BHK Deep Clean</h3>
+            <p class="pc-desc">Perfect for unfurnished or empty flats (up to 500 sq.ft.) pre-move in or post-renovation.</p>
+            <div class="pc-price-row">
+              <span class="pc-price">₹2,699</span>
+              <span class="pc-price-old">₹3,528</span>
+            </div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Floor deep scrub &amp; mopping</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Glass sliding windows channels</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Bathroom scrubbing &amp; sanitizing</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Basic kitchen cabinet cleaning</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+          <div class="pricing-card" data-category="empty-flat">
+            <div class="pc-badge pc-badge-empty">EMPTY FLAT</div>
+            <h3 class="pc-title">2 BHK Deep Clean</h3>
+            <p class="pc-desc">Detailed scrub down for empty 2 BHK flats (up to 900 sq.ft.). Reaches all hidden dust.</p>
+            <div class="pc-price-row">
+              <span class="pc-price">₹3,499</span>
+              <span class="pc-price-old">₹4,700</span>
+            </div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>High-power vacuuming</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Window tracks &amp; grills scrubbed</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Two bathrooms sanitized</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Kitchen tile degreasing</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+          <div class="pricing-card" data-category="empty-flat">
+            <div class="pc-badge pc-badge-empty">EMPTY FLAT</div>
+            <h3 class="pc-title">3 BHK Deep Clean</h3>
+            <p class="pc-desc">Comprehensive package for spacious 3 BHK empty flats (up to 1600 sq.ft.).</p>
+            <div class="pc-price-row">
+              <span class="pc-price">₹3,999</span>
+              <span class="pc-price-old">₹5,881</span>
+            </div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Industrial machinery scrub</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Three bathrooms scrubbed</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Kitchen tiles, slab &amp; cupboards</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Balconies and terrace wash</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+          <div class="pricing-card" data-category="empty-flat">
+            <div class="pc-badge pc-badge-empty">EMPTY FLAT</div>
+            <h3 class="pc-title">4 BHK Deep Clean</h3>
+            <p class="pc-desc">Full-scale deep cleaning for large 4 BHK empty or pre-possession flats.</p>
+            <div class="pc-price-row"><span class="pc-price">₹5,999</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Industrial machinery scrub</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Four bathrooms deep cleaned</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete kitchen degreasing</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>All balconies &amp; terrace wash</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+          <div class="pricing-card" data-category="empty-flat">
+            <div class="pc-badge pc-badge-empty">EMPTY FLAT</div>
+            <h3 class="pc-title">5 BHK Deep Clean</h3>
+            <p class="pc-desc">Custom quote for villa-size or 5 BHK properties — tailored to your exact space.</p>
+            <div class="pc-price-row"><span class="pc-price-custom">Custom Quote</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Custom team deployment</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete interior deep clean</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>All bathrooms &amp; kitchen</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dedicated supervisor audit</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary" style="width:100%;text-align:center;">Get a Quote</a>
+          </div>
+
+          <!-- FURNISHED FLAT -->
+          <div class="pricing-card" data-category="furnished">
+            <div class="pc-badge pc-badge-furnished">FURNISHED FLAT</div>
+            <h3 class="pc-title">1 BHK Furnished Deep Clean</h3>
+            <p class="pc-desc">Complete deep clean for occupied or furnished 1 BHK homes with furniture &amp; appliances.</p>
+            <div class="pc-price-row"><span class="pc-price">₹3,499</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Rooms, bathroom, windows &amp; floor mopping</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Kitchen slab &amp; sink cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Exterior cabinet cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Kitchen degreasing</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+          <div class="pricing-card" data-category="furnished">
+            <div class="pc-badge pc-badge-furnished">FURNISHED FLAT</div>
+            <h3 class="pc-title">2 BHK Furnished Deep Clean</h3>
+            <p class="pc-desc">Thorough deep clean for furnished 2 BHK homes including all living areas.</p>
+            <div class="pc-price-row"><span class="pc-price">₹3,999</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete 2 BHK deep cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Two bathrooms &amp; kitchen</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Exterior cabinet &amp; sink cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Kitchen degreasing</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+          <div class="pricing-card" data-category="furnished">
+            <div class="pc-badge pc-badge-furnished">FURNISHED FLAT</div>
+            <h3 class="pc-title">3 BHK Furnished Deep Clean</h3>
+            <p class="pc-desc">Complete deep clean for large furnished 3 BHK properties with detailed attention.</p>
+            <div class="pc-price-row"><span class="pc-price">₹4,999</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete 3 BHK deep cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Three bathrooms scrubbed</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Full kitchen degreasing</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Balcony &amp; terrace wash</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+          <div class="pricing-card" data-category="furnished">
+            <div class="pc-badge pc-badge-furnished">FURNISHED FLAT</div>
+            <h3 class="pc-title">4 BHK Furnished Deep Clean</h3>
+            <p class="pc-desc">Custom quote for large furnished 4 BHK homes — tailored to your needs.</p>
+            <div class="pc-price-row"><span class="pc-price-custom">Custom Quote</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete 4 BHK deep cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>All bathrooms &amp; kitchen</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dedicated supervisor audit</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Flexible scheduling</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary" style="width:100%;text-align:center;">Get a Quote</a>
+          </div>
+
+          <!-- SILVER PACKAGE -->
+          <div class="pricing-card pricing-card-silver" data-category="silver furnished">
+            <div class="pc-badge pc-badge-silver">SILVER PACKAGE</div>
+            <h3 class="pc-title">1 BHK Silver Package</h3>
+            <p class="pc-desc">Standard deep cleaning package for 1 BHK furnished flats.</p>
+            <div class="pc-price-row"><span class="pc-price pc-price-silver">₹3,499</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete 1 BHK deep cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Rooms, bathroom, windows &amp; floor mopping</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Kitchen slab &amp; sink cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Customer empties &amp; replaces kitchen items</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary" style="width:100%;text-align:center;background:#64748B;color:#fff;">Book Service</a>
+          </div>
+
+          <div class="pricing-card pricing-card-silver" data-category="silver furnished">
+            <div class="pc-badge pc-badge-silver">SILVER PACKAGE</div>
+            <h3 class="pc-title">2 BHK Silver Package</h3>
+            <p class="pc-desc">Standard deep cleaning package for 2 BHK furnished flats.</p>
+            <div class="pc-price-row"><span class="pc-price pc-price-silver">₹4,499</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete 2 BHK deep cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Rooms, bathroom, windows &amp; floor mopping</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Kitchen slab &amp; sink cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Customer empties &amp; replaces kitchen items</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary" style="width:100%;text-align:center;background:#64748B;color:#fff;">Book Service</a>
+          </div>
+
+          <div class="pricing-card pricing-card-silver" data-category="silver furnished">
+            <div class="pc-badge pc-badge-silver">SILVER PACKAGE</div>
+            <h3 class="pc-title">3 BHK Silver Package</h3>
+            <p class="pc-desc">Standard deep cleaning package for 3 BHK furnished flats.</p>
+            <div class="pc-price-row"><span class="pc-price pc-price-silver">₹4,999</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete 3 BHK deep cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Rooms, bathroom, windows &amp; floor mopping</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Kitchen slab &amp; sink cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Customer empties &amp; replaces kitchen items</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary" style="width:100%;text-align:center;background:#64748B;color:#fff;">Book Service</a>
+          </div>
+
+          <!-- GOLD PACKAGE -->
+          <div class="pricing-card pricing-card-gold" data-category="gold furnished">
+            <div class="pc-badge pc-badge-gold">GOLD PACKAGE</div>
+            <h3 class="pc-title">1 BHK Gold Package</h3>
+            <p class="pc-desc">Premium deep cleaning with full kitchen handling including fridge &amp; organising.</p>
+            <div class="pc-price-row"><span class="pc-price pc-price-gold">₹4,499</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete 1 BHK deep cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Professional kitchen handling</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Team empties &amp; organises kitchen</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Refrigerator deep cleaning (inside + outside)</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;background:#D97706;border-color:#D97706;">Book Service</a>
+          </div>
+
+          <div class="pricing-card pricing-card-gold" data-category="gold furnished">
+            <div class="pc-badge pc-badge-gold">GOLD PACKAGE</div>
+            <h3 class="pc-title">2 BHK Gold Package</h3>
+            <p class="pc-desc">Premium deep cleaning with full kitchen handling for 2 BHK furnished homes.</p>
+            <div class="pc-price-row"><span class="pc-price pc-price-gold">₹5,499</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete 2 BHK deep cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Professional kitchen handling</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Team empties &amp; organises kitchen</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Refrigerator deep cleaning (inside + outside)</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;background:#D97706;border-color:#D97706;">Book Service</a>
+          </div>
+
+          <div class="pricing-card pricing-card-gold" data-category="gold furnished">
+            <div class="pc-badge pc-badge-gold">GOLD PACKAGE</div>
+            <h3 class="pc-title">3 BHK Gold Package</h3>
+            <p class="pc-desc">Premium deep cleaning with full kitchen handling for 3 BHK furnished homes.</p>
+            <div class="pc-price-row"><span class="pc-price pc-price-gold">₹5,999</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete 3 BHK deep cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Professional kitchen handling</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Team empties &amp; organises kitchen</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Refrigerator deep cleaning (inside + outside)</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;background:#D97706;border-color:#D97706;">Book Service</a>
+          </div>
+
+          <!-- SOFA & OFFICE -->
+          <div class="pricing-card" data-category="office-sofa">
+            <div class="pc-badge pc-badge-sofa">SOFA CARE</div>
+            <h3 class="pc-title">Sofa Shampooing</h3>
+            <p class="pc-desc">Deep dry vacuuming, wet shampooing, and stain extraction for fresh sofas.</p>
+            <div class="pc-price-row">
+              <span class="pc-price">₹199<span style="font-size:1rem;font-weight:600;">/seat</span></span>
+              <span class="pc-price-old">₹249/seat</span>
+            </div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Deep dry vacuuming</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Wet shampooing</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Stain extraction</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Odor elimination</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+          <div class="pricing-card" data-category="office-sofa">
+            <div class="pc-badge pc-badge-office">CORPORATE &amp; WORKSPACE</div>
+            <h3 class="pc-title">Office Deep Cleaning</h3>
+            <p class="pc-desc">Complete dusting, floor scrubbing, glass cleaning &amp; disinfection for workspaces.</p>
+            <div class="pc-price-row">
+              <span class="pc-price">₹3,500</span>
+              <span class="pc-price-label">Starting Price</span>
+            </div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete dusting &amp; sanitizing</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Heavy-duty machine scrubbing</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Glass cleaning &amp; disinfection</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Eco-friendly chemicals used</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+          <!-- WALL WET WIPING -->
+          <div class="pricing-card" data-category="wall-wiping">
+            <div class="pc-badge pc-badge-wall">WALL WET WIPING</div>
+            <h3 class="pc-title">1 BHK Wall Wet Wiping</h3>
+            <p class="pc-desc">Professional wall wet wiping service for complete interior wall cleaning.</p>
+            <div class="pc-price-row"><span class="pc-price">₹999</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete interior wall cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dust &amp; stain removal</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Ceiling to floor coverage</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Safe for all paint types</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+          <div class="pricing-card" data-category="wall-wiping">
+            <div class="pc-badge pc-badge-wall">WALL WET WIPING</div>
+            <h3 class="pc-title">2 BHK Wall Wet Wiping</h3>
+            <p class="pc-desc">Professional wall wet wiping service for complete interior wall cleaning.</p>
+            <div class="pc-price-row"><span class="pc-price">₹1,499</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete 2 BHK wall cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dust &amp; stain removal</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Ceiling to floor coverage</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Safe for all paint types</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+          <div class="pricing-card" data-category="wall-wiping">
+            <div class="pc-badge pc-badge-wall">WALL WET WIPING</div>
+            <h3 class="pc-title">3 BHK Wall Wet Wiping</h3>
+            <p class="pc-desc">Professional wall wet wiping service for complete interior wall cleaning.</p>
+            <div class="pc-price-row"><span class="pc-price">₹1,999</span></div>
+            <ul class="pc-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Complete 3 BHK wall cleaning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dust &amp; stain removal</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Ceiling to floor coverage</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Safe for all paint types</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Book Service</a>
+          </div>
+
+        </div><!-- /.pricing-cards-grid -->
+
+        <div style="text-align:center; margin-top:2.5rem;">
+          <a href="plans.html" class="btn btn-secondary btn-lg">View All Plans &amp; Packages →</a>
+        </div>
+      </div>
+    </section>
+
     <!-- 10. FINAL HIGH CONVERSION CTA SECTION -->
     <section class="section-spacing-sm">
       <div class="container">
@@ -778,7 +1132,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo" style="color: #FFFFFF;">
-            <img src="images/cleanfox-logo.png" alt="Cleanfox" class="brand-logo-img" style="filter: brightness(0) invert(1);">
+            <img src="images/cleanfox-logo-white.png" alt="Cleanfox" class="brand-logo-img">
           </a>
           <p class="footer-about">
             Professional Home Cleaning Service based in Navi Mumbai. We bring premium hygiene, machine floor care, and fabric restoration to modern apartments and homes.
