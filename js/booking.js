@@ -67,24 +67,52 @@ function initBookingForm() {
 
     const name = form.querySelector('#fullName')?.value.trim();
     const phone = form.querySelector('#phoneNumber')?.value.trim();
-    const service = form.querySelector('#serviceSelect')?.options[form.querySelector('#serviceSelect').selectedIndex]?.text;
+    const email = form.querySelector('#emailAddress')?.value.trim();
+    const serviceEl = form.querySelector('#serviceSelect');
+    const service = serviceEl ? serviceEl.options[serviceEl.selectedIndex]?.text : 'Home Deep Cleaning';
+    const propertyEl = form.querySelector('#propertySelect');
+    const property = propertyEl ? propertyEl.options[propertyEl.selectedIndex]?.text : '2 BHK Apartment';
     const date = form.querySelector('#preferredDate')?.value;
+    const timeEl = form.querySelector('#preferredTime');
+    const time = timeEl ? timeEl.options[timeEl.selectedIndex]?.text : 'Morning Slot';
+    const address = form.querySelector('#addressArea')?.value.trim();
+    const notes = form.querySelector('#additionalNotes')?.value.trim();
 
     if (!name || !phone) {
       alert('Please fill in your name and phone number so our team can assist you.');
       return;
     }
 
-    // Show high-end confirmation toast
+    // Build structured WhatsApp message
+    let msg = `*New Cleaning Enquiry — Cleanfox*\n\n`;
+    msg += `👤 *Name:* ${name}\n`;
+    msg += `📞 *Phone:* ${phone}\n`;
+    if (email) msg += `✉️ *Email:* ${email}\n`;
+    msg += `🧹 *Service:* ${service}\n`;
+    msg += `🏠 *Property:* ${property}\n`;
+    if (date) msg += `📅 *Preferred Date:* ${date}\n`;
+    if (time) msg += `⏰ *Preferred Slot:* ${time}\n`;
+    if (address) msg += `📍 *Location:* ${address}\n`;
+    if (notes) msg += `📝 *Notes/Focus:* ${notes}\n`;
+    msg += `\nPlease confirm slot availability and share the best quotation.`;
+
+    const encodedMsg = encodeURIComponent(msg);
+    const whatsappUrl = `https://wa.me/918369437974?text=${encodedMsg}`;
+
+    // Show confirmation toast
     if (window.showToast) {
-      window.showToast(`Thank you, ${name}! Your request for ${service} on ${date} has been received. Our Navi Mumbai team is calling you shortly!`, 6000);
+      window.showToast(`Thank you, ${name}! Redirecting your booking enquiry to Cleanfox WhatsApp...`, 5000);
     }
+
+    // Open WhatsApp in a new tab
+    setTimeout(() => {
+      window.open(whatsappUrl, '_blank');
+    }, 400);
 
     // Reset form fields
     form.reset();
 
     // Re-initialize default estimate
-    const propertySelect = document.getElementById('propertySelect');
-    if (propertySelect) propertySelect.dispatchEvent(new Event('change'));
+    if (propertyEl) propertyEl.dispatchEvent(new Event('change'));
   });
 }
